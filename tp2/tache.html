@@ -1,0 +1,29 @@
+<!--Etape 1-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <label for="taskInput">Tâche :</label>
+    <input id="taskInput" type="text" placeholder="Ajouter une tâche" aria-label="Champ de saisie">
+    <button id="addTaskBtn" type="button" onclick="ajouterTache()">Ajouter</button>
+    <button id="deleteAllBtn" type="button" onclick="toutSupprimer()">Tout Supprimer</button>
+
+    <select name="filtrer" id="filtrer" onchange="afficherlisteTache()">
+        <option value="toute">Toute(s)</option>
+        <option value="en cours">En cours</option>
+        <option value="Terminée">Terminée(s)</option>
+    </select>
+
+    <ul id="taskList" aria-live="polite"></ul>
+    <p id="etatTache"></p>
+
+    <script src="app.js"></script>
+</body>
+</html>

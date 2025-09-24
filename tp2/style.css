@@ -1,0 +1,61 @@
+/*Etape 1 */
+    body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+}
+#taskInput {
+    padding: 8px;
+    width: 70%;
+}
+#addTaskBtn, #deleteAllBtn {
+    padding: 8px 12px;
+    margin-left: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.task-item span {
+    flex: 1;
+}
+.btn {
+    margin-left: 5px;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.btn-complete {
+    background-color: #28a745;
+    color: white;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+select {
+    padding: 6px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+#etatTache {
+    margin-top: 20px;
+    font-weight: bold;
+}
