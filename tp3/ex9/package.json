@@ -1,0 +1,14 @@
+{
+  "name": "ex9-tp3",
+  "version": "1.0.0",
+  "main": "index.js",
+   "scripts": {
+  "lint": "eslint 'src/**/*.{ts,tsx}'"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+ 
+}
+
