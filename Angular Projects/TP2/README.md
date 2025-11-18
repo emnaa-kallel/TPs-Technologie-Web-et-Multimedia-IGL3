@@ -1,6 +1,7 @@
 # ListeEtudiants
 
-![Capture d'écran TP2](./Angular%20Projects/TP2/Capture%20d'%C3%A9cran%202025-11-18%20214240.png)
+<img width="873" height="319" alt="Image" src="https://github.com/user-attachments/assets/2e179712-0a44-4490-ba0f-fa13720681a0" />
+
 
 
 
