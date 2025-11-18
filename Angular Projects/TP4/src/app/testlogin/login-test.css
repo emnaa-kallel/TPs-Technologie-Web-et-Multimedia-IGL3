@@ -1,0 +1,91 @@
+/* Container général du login */
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Titres / messages de bienvenue */
+.welcome {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 1.5rem;
+}
+
+/* Champs input */
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 0.6rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.4);
+}
+
+/* Boutons principaux */
+.btn {
+  padding: 10px 16px;
+  margin: 0.8rem 0 0 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+  background-color: #008CBA;
+  margin-top: 0.8rem;
+}
+
+.btn-secondary:hover {
+  background-color: #0072a3;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-secondary {
+    width: 100%;
+  }
+}
