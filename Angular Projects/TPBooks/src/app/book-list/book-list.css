@@ -1,0 +1,163 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 800px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 16px 20px;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
+}
+
+/* CORRECTION : Supprimer le border-bottom du dernier tr normal */
+tbody tr:last-of-type:not(:only-child) {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #f1f3ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+td {
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Style pour les boutons */
+button {
+  padding: 10px 18px;
+  margin: 0 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:first-child {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+}
+
+button:first-child:hover {
+  background: linear-gradient(135deg, #45a049 0%, #4CAF50 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+button:last-child {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+}
+
+button:last-child:hover {
+  background: linear-gradient(135deg, #ee5a52 0%, #ff6b6b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* CORRECTION : Style spécifique pour la ligne "Aucun livre trouvé" */
+tbody tr:last-child td[colspan] {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 1.1em;
+  background-color: #f8f9fa;
+  border-bottom: none;
+}
+
+/* CORRECTION : Indicateur de disponibilité avec sélecteur correct */
+td:nth-child(4) {
+  font-weight: bold;
+  position: relative;
+  padding-left: 30px;
+}
+
+/* CORRECTION : Utiliser une classe au lieu de :contains */
+td:nth-child(4).available-yes:before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+}
+
+td:nth-child(4).available-no:before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff6b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.8em;
+    min-width: auto;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    font-size: 0.75em;
+    margin: 2px;
+  }
+  
+  td:nth-child(4) {
+    padding-left: 25px;
+  }
+  
+  td:nth-child(4):before {
+    left: 6px;
+    width: 10px;
+    height: 10px;
+  }
+}

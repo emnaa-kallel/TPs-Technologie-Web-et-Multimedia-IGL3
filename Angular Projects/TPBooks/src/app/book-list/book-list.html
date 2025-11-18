@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>Titre</th>
+      <th>Auteur</th>
+      <th>Catégorie</th>
+      <th>Disponible</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books; trackBy: trackByBookId">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.category }}</td>
+      <td>{{ book.isAvailable ? 'Oui' : 'Non' }}</td>
+      <td>
+        <button (click)="edit.emit(book)">Modifier</button>
+        <button (click)="delete.emit(book.id)">Supprimer</button>
+      </td>
+    </tr>
+    <!-- Message si aucun livre -->
+    <tr *ngIf="books.length === 0">
+      <td colspan="5" style="text-align: center;">Aucun livre trouvé</td>
+    </tr>
+  </tbody>
+</table>
