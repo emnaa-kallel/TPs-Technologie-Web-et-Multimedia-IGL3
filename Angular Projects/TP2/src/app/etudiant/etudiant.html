@@ -1,0 +1,16 @@
+<!--
+<h2>Liste des étudiants</h2>
+<ul>
+  <li *ngFor="let e of listeEtudiants">
+    {{ e.id }} - {{ e.name |uppercase }} - {{ e.average }} - {{ e.classe || 'Classe non définie' }}
+  </li>
+</ul>
+-->
+
+<h2>{{etudiant.name}}</h2> 
+<div><strong> id: </strong> {{etudiant.id}}</div> 
+<div>  
+<label><strong>name: </strong> 
+<input [(ngModel)]="etudiant.name" placeholder="name"/> 
+</label>  
+</div> 
