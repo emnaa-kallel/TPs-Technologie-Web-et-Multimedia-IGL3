@@ -1,0 +1,7 @@
+<h1>Jeu de Quiz</h1>
+<app-question *ngFor="let q of questions"
+              [questionData]="q"
+              (answered)="onAnswered($event)">
+</app-question>
+<p>Score actuel : {{ score }}</p>
+<button (click)="goToScore()">Voir votre score final</button>
