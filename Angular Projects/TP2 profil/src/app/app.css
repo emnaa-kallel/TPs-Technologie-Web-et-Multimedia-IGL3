@@ -1,0 +1,55 @@
+/* Conteneur principal commun à tous les composants */
+:host {
+  display: block;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f9f9f9, #e0f7fa);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol */
+:host(:hover) {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Titres si présents (ex: Profil) */
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #0277bd;
+}
+
+/* Paragraphes pour afficher les informations */
+p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Mise en valeur des labels forts */
+strong {
+  color: #00796b;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 480px) {
+  :host {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
