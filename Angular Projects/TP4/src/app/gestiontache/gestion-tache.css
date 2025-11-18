@@ -1,0 +1,87 @@
+/* Container général */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+/* Chaque tâche */
+.task {
+  display: flex;
+  justify-content: space-between; /* espace entre texte et bouton */
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: background 0.3s ease, transform 0.2s, box-shadow 0.2s;
+}
+
+/* Box du texte de la tâche */
+.task-content {
+  flex: 1; /* occupe tout l'espace disponible */
+  margin-right: 1rem; /* éloigne le texte du bouton */
+  word-wrap: break-word;
+}
+
+/* Effet hover */
+.task:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+
+/* Texte barré pour les tâches complétées */
+.completed {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.8;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Bouton */
+button {
+  background: linear-gradient(145deg, #4CAF50, #43a047);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #4CAF50, #43a047);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Message si aucune tâche */
+.empty-message {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .task {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
