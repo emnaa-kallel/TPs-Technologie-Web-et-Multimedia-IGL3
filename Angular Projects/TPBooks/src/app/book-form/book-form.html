@@ -1,0 +1,97 @@
+<form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+
+  <!-- Title -->
+  <div>
+    <label for="title">Titre</label>
+    <input id="title" name="title" type="text"
+           [(ngModel)]="book.title"
+           required minlength="3"
+           #t="ngModel">
+    <div *ngIf="t.invalid && t.dirty" class="error">
+      Titre invalide (min 3 caractères).
+    </div>
+  </div>
+
+  <!-- Author -->
+  <div>
+    <label for="author">Auteur</label>
+    <input id="author" name="author" type="text"
+           [(ngModel)]="book.author"
+           required minlength="3"
+           #a="ngModel">
+    <div *ngIf="a.invalid && a.dirty" class="error">
+      Auteur invalide (min 3 caractères).
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div>
+    <label for="publisherEmail">Email éditeur</label>
+    <input id="publisherEmail" name="publisherEmail" type="email"
+           [(ngModel)]="book.publisherEmail"
+           required email
+           #e="ngModel">
+    <div *ngIf="e.invalid && e.dirty" class="error">
+      Email invalide.
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div>
+    <label for="publisherPhone">Téléphone éditeur</label>
+    <input id="publisherPhone" name="publisherPhone" type="text"
+           [(ngModel)]="book.publisherPhone"
+           pattern="^[0-9]{8}$"
+           #p="ngModel">
+    <div *ngIf="p.invalid && p.dirty" class="error">
+      Téléphone invalide (8 chiffres).
+    </div>
+  </div>
+
+  <!-- Release Date -->
+  <div>
+    <label for="releaseDate">Date de sortie</label>
+    <input id="releaseDate" name="releaseDate" type="date"
+           [(ngModel)]="book.releaseDate"
+           required
+           #d="ngModel">
+    <div *ngIf="d.invalid && d.dirty" class="error">
+      Date obligatoire.
+    </div>
+  </div>
+
+  <!-- Category -->
+  <div>
+    <label for="category">Catégorie</label>
+    <select id="category" name="category"
+            [(ngModel)]="book.category"
+            required
+            #c="ngModel">
+      <option value="">-- Sélectionner --</option>
+      <option *ngFor="let cat of categories" [value]="cat">
+        {{ cat }}
+      </option>
+    </select>
+    <div *ngIf="c.invalid && c.dirty" class="error">
+      Catégorie obligatoire.
+    </div>
+  </div>
+
+  <!-- Availability -->
+  <div class="checkbox-row">
+    <input type="checkbox" name="isAvailable" [(ngModel)]="book.isAvailable">
+    <label>Disponible</label>
+  </div>
+
+  <!-- Stock -->
+  <div>
+    <label for="stock">Stock (optionnel)</label>
+    <input id="stock" name="stock" type="number"
+           [(ngModel)]="book.stock" min="0">
+  </div>
+
+  <button type="submit">
+    {{ selectedBook ? 'Mettre à jour' : 'Ajouter' }}
+  </button>
+
+</form>
