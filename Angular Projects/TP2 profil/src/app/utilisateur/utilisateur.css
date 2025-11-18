@@ -1,0 +1,26 @@
+/* Conteneur principal */
+:host {
+  display: block;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background-color: #e0f7fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet au survol du composant */
+:host(:hover) {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le texte à l’intérieur */
+p {
+  font-size: 16px;
+  color: #00796b;
+  margin: 0;
+}
