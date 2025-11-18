@@ -1,0 +1,51 @@
+/* Image de la question */
+.question-image {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 10px auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Question */
+h3 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Options */
+button {
+  background: #f0f0f0;
+  border: 1px solid #bbb;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+  background: #ddd;
+}
+
+button:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Feedback */
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Ligne de séparation */
+hr {
+  margin-top: 15px;
+  border: 0;
+  height: 1px;
+  background: #ccc;
+}

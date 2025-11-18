@@ -1,0 +1,26 @@
+<!-- Affiche l'image si elle existe -->
+<img *ngIf="questionData.image"
+     [src]="questionData.image"
+     alt="Illustration question"
+     class="question-image">
+
+<!-- La question -->
+<h3>{{ questionData.question }}</h3>
+
+<!-- Les options sous forme de boutons -->
+<div>
+  <button *ngFor="let opt of questionData.options"
+          (click)="onSelect(opt)"
+          [disabled]="questionData.answered">
+    {{ opt }}
+  </button>
+</div>
+
+<!-- Affiche la réponse après avoir choisi -->
+<p *ngIf="questionData.answered">
+  Réponse choisie : {{ questionData.selected }}
+  <span *ngIf="questionData.selected === questionData.reponse">✅ Correct</span>
+  <span *ngIf="questionData.selected !== questionData.reponse">❌ Incorrect</span>
+</p>
+
+<hr>
