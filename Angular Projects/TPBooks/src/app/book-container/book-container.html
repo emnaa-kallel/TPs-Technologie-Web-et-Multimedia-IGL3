@@ -1,0 +1,26 @@
+<h2 class="titre-principal">📚 Gestion des livres</h2>
+
+<!-- Formulaire -->
+<app-book-form 
+    [categories]="categories"
+    [selectedBook]="selectedBook"
+    (bookAdded)="addBook($event)"
+    (bookUpdated)="updateBook($event)">
+</app-book-form>
+
+<!-- Recherche -->
+<input type="text" [(ngModel)]="filterText" placeholder="Rechercher par titre">
+
+<!-- Boutons de tri -->
+<button (click)="sortByCategory()">Trier par catégorie</button>
+<button (click)="sortByAvailable()">Trier par disponibilité</button>
+
+<!-- Liste filtrée -->
+<app-book-list 
+    [books]="filteredBooks()" 
+    (edit)="editBook($event)" 
+    (delete)="deleteBook($event)">
+</app-book-list>
+
+<!-- Compteur dynamique -->
+<p>Total de livres : {{ books.length }}</p>
