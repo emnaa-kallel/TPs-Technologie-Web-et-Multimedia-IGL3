@@ -1,0 +1,49 @@
+:host {
+  display: block;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #e3f2fd, #fff3e0); /* bleu pastel + orange pastel */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+:host(:hover) {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #1976d2; /* bleu vif pour titre */
+}
+
+p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #424242; /* gris foncé */
+  line-height: 1.5;
+}
+
+strong {
+  color: #f57c00; /* orange vif pour accent */
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
