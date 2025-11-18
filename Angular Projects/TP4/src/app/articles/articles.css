@@ -1,0 +1,79 @@
+/* Titres */
+h2 {
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Inputs, textarea, select */
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Buttons */
+.btn {
+  margin-left: 10px;
+  padding: 10px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Card container */
+.card {
+  background: #fff;
+  margin: 12px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.12);
+}
+
+/* Priority indicators */
+.important {
+  border-left: 6px solid #e74c3c; /* rouge vif */
+}
+
+.normal {
+  border-left: 6px solid #f39c12; /* orange */
+}
+
+.faible {
+  border-left: 6px solid #2ecc71; /* vert */
+}
